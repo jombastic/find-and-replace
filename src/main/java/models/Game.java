@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Game {
   public String findAndReplace(String sentence, String word, String replacement) {
+    sentence = sentence.toLowerCase();
     List<String> listOfWords = new ArrayList<>();
     String[] words = sentence.split(" ");
     String[] wordCharacters;

@@ -23,9 +23,16 @@ public class GameTest {
   }
 
   @Test
-  public void findAndReplace_replaceANotWholeWordInString_String() {
+  public void findAndReplace_replaceAWordWithinAComplexWordInString_String() {
     Game testGame = new Game();
     String result = "dogherine is delidogely domestidoging the dog in the doghedral";
     assertEquals(result, testGame.findAndReplace("catherine is delicately domesticating the cat in the cathedral", "cat", "dog"));
+  }
+
+  @Test
+  public void findAndReplace_replaceAWordWithinAComplexWordInStringWithCapitalization_String() {
+    Game testGame = new Game();
+    String result = "dogherine is delidogely domestidoging the dog in the doghedral";
+    assertEquals(result, testGame.findAndReplace("Dogherine is Delidogely domEstidoging the doG in The dogheDral", "cat", "dog"));
   }
 }
