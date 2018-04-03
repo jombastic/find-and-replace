@@ -14,4 +14,11 @@ public class GameTest {
     String result = "universe";
     assertEquals(result, testGame.findAndReplace("world", "world", "universe"));
   }
+
+  @Test
+  public void findAndReplace_replaceAWholeWorldInString_String() {
+    Game testGame = new Game();
+    String result = "hello universe";
+    assertEquals(result, testGame.findAndReplace("hello world", "world", "universe"));
+  }
 }
