@@ -16,9 +16,16 @@ public class GameTest {
   }
 
   @Test
-  public void findAndReplace_replaceAWholeWorldInString_String() {
+  public void findAndReplace_replaceAWholeWordInString_String() {
     Game testGame = new Game();
     String result = "hello universe";
     assertEquals(result, testGame.findAndReplace("hello world", "world", "universe"));
+  }
+
+  @Test
+  public void findAndReplace_replaceANotWholeWordInString_String() {
+    Game testGame = new Game();
+    String result = "dogherine is delidogely domestidoging the dog in the doghedral";
+    assertEquals(result, testGame.findAndReplace("catherine is delicately domesticating the cat in the cathedral", "cat", "dog"));
   }
 }
